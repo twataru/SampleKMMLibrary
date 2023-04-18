@@ -34,8 +34,7 @@ dependencyResolutionManagement {
 Package.swiftのtargetsセクションにて`.xcframework`をbinaryTargetとして指定するとSwiftPMとして認識され、Xcode側でパッケージ追加をすることができる。
 
 ### ./gradlew createSwiftPackage 
-SwiftPackageManager向けにzipファイルを作成する。  
-使わなくて良い。
+SwiftPackageManager向けにzipファイルを作成する。
 
 # KMM導入検証
 ##実装までにやったこと

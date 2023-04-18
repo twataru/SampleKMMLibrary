@@ -43,8 +43,8 @@ kotlin {
             iOS { v("13") }
         }
         swiftToolsVersion("5.3")
-        outputDirectory(File(buildDir, "shared"))
-        zipFileName("shared")
+        outputDirectory(File(buildDir, "swiftPM"))
+        zipFileName("SampleKMMLibrary.xcframework")
         distributionMode { local() }
     }
 

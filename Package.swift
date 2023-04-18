@@ -8,7 +8,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "shared",
-            path: "shared/build/shared/SampleKMMLibrary.xcframework"
+            path: "https://api.github.com/repos/wataru-taniuchi/sample-kmm-library/releases/tag/v1.0.0.zip"
         ),
     ]
 )
