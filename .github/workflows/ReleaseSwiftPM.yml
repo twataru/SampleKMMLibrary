@@ -24,7 +24,7 @@ jobs:
       uses: mathieudutour/github-tag-action@v6.1
       with:
         github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-        default_bump: "major"
+        default_bump: "minor"
     - name: Build
       run: ./gradlew createSwiftPackage 
     - name: Release
@@ -35,4 +35,4 @@ jobs:
         name: ${{ steps.tag_version.outputs.new_tag }}
         tag_name: ${{ steps.tag_version.outputs.new_tag }}
         generate_release_notes: true
-        files: shared/build/swiftPM/shared.zip
+        files: shared.zip
