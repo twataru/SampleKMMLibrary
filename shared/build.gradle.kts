@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.plugin.mpp.apple.XCFramework
 import org.jetbrains.kotlin.gradle.plugin.mpp.NativeBuildType
 
-val librayVer = "0.0.2"
+val librayVer = "0.0.1"
 
 
 plugins {
@@ -45,7 +45,7 @@ kotlin {
         swiftToolsVersion("5.3")
         outputDirectory(File(buildDir, "swiftPM"))
         zipFileName("SampleKMMLibrary.xcframework")
-        distributionMode { local() }
+        distributionMode { remote("https://api.github.com/repos/wataru-taniuchi/sample-kmm-library/releases/tag/v${librayVer}/SampleKMMLibrary.xcframework.zip") }
     }
 
     android {
