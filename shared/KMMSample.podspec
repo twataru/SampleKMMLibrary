@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name                     = 'KMMSample'
-    spec.version                  = '0.0.2'
+    spec.version                  = '0.0.1'
     spec.homepage                 = 'https://github.com/wataru-taniuchi/sample-kmm-library'
     spec.source                   = { :http=> ''}
     spec.authors                  = ''

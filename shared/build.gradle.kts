@@ -45,7 +45,7 @@ kotlin {
         swiftToolsVersion("5.3")
         outputDirectory(File(buildDir, "swiftPM"))
         zipFileName("SampleKMMLibrary")
-        distributionMode { remote("https://api.github.com/repos/wataru-taniuchi/sample-kmm-library/releases/tag/v${librayVer}/SampleKMMLibrary.xcframework.zip") }
+        distributionMode { remote("https://api.github.com/repos/wataru-taniuchi/sample-kmm-library/releases/tag/v${librayVer}/SampleKMMLibrary.zip") }
     }
 
     android {
