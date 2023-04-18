@@ -1,7 +1,7 @@
 # This workflow will build a Swift project
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-swift
 
-name: Swift
+name: Release
 
 on:
   push:
@@ -19,14 +19,14 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-    - name: Build
-      run: ./gradlew createSwiftPackage 
     - name: Bump version and push tag
       id: tag_version
-      uses: mathieudutour/github-tag-action@v5
+      uses: mathieudutour/github-tag-action@v6.1
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         default_bump: "minor"
+    - name: Build
+      run: ./gradlew createSwiftPackage 
     - name: Release
       uses: softprops/action-gh-release@v1
       env: 
