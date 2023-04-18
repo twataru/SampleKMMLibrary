@@ -2,19 +2,15 @@
 天気予報を取得するライブラリ
 
 # コマンド
-```sh
-% ./gradlew publishToMavenLocal 
-```
-ローカル端末にMavenリポジトリを公開する。
+### ./gradlew publishToMavenLocal 
+ローカル端末にMavenリポジトリを公開する。  
 アプリ側のsettings.gradle#dependencyResolutionManagement.repositoriesに`mavenLocal()`を追加する必要がある
 
-```sh
-% ./gradlew publishGprPublicationToGitHubPackagesRepository 
-```
-Github PackagesにMavenリポジトリを公開する。
+### ./gradlew publishGprPublicationToGitHubPackagesRepository 
+Github PackagesにMavenリポジトリを公開する。  
 対象のGithubリポジトリがprivateの場合は、gradle.propertiesもしくは.envにGithubユーザー名とPersonalAccessTokenを設定し、
-settings.gradle#dependencyResolutionManagement.repositoriesに個別のmavenリポジトリを定義する必要がある
-FYI: https://docs.github.com/ja/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry#using-a-published-package
+settings.gradle#dependencyResolutionManagement.repositoriesに個別のmavenリポジトリを定義する必要がある。  
+
 ```gradle
 // 例
 ...
@@ -31,12 +27,15 @@ dependencyResolutionManagement {
     }
 }
 ```
+参考: https://docs.github.com/ja/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry#using-a-published-package
 
-```sh
-% ./gradlew createSwiftPackage 
-```
-SwiftPackageManager向けにzipファイルを作成する。
-SwiftPMとしてXcodeにimportさせるには新しくSwiftPM用のGithubリポジトリを用意する必要がある
+### ./gradlew createXCFramework
+`.xcframework`拡張子のファイルを作成する。  
+Package.swiftのtargetsセクションにて`.xcframework`をbinaryTargetとして指定するとSwiftPMとして認識され、Xcode側でパッケージ追加をすることができる。
+
+### ./gradlew createSwiftPackage 
+SwiftPackageManager向けにzipファイルを作成する。  
+使わなくて良い。
 
 # KMM導入検証
 ##実装までにやったこと
