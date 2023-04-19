@@ -3,9 +3,7 @@
 
 name: Release
 
-on:
-  push:
-    branches: [ "main" ]
+on: [dispatch_workflow]
 
 jobs:
   build:
@@ -31,6 +29,11 @@ jobs:
       run: |
         ./gradlew cleanSwiftPM
         ./gradlew createXCFramework
+    - name: Update SwiftPM
+      run: |
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git commit -M "Update SwiftPM"
     - name: Release
       uses: softprops/action-gh-release@v1
       env: 

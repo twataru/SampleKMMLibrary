@@ -145,5 +145,6 @@ publishing {
 }
 
 task("cleanSwiftPM") {
-    delete("shared/swiftPM")
+    val swiftPMDirPath = project.projectDir.toString() + "/swiftPM"
+    project.delete(files("${swiftPMDirPath}"))
 }
