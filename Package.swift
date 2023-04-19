@@ -13,6 +13,6 @@ let package = Package(
         ),
     ],
     targets: [
-         .target(name: "SampleKMMLibrary", path: "shared/swiftPM/SampleKMMLibrary.xcframework"),
+         .target(name: "SampleKMMLibrary", path: "shared/swiftPM"),
     ]
 )

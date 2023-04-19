@@ -143,3 +143,7 @@ publishing {
         }
     }
 }
+
+task("cleanSwiftPM") {
+    delete("shared/swiftPM")
+}

@@ -28,7 +28,9 @@ jobs:
         default_bump: "patch"
         tag_prefix: "v"
     - name: Build
-      run: ./gradlew createSwiftPackage
+      run: |
+        ./gradlew cleanSwiftPM
+        ./gradlew createXCFramework
     - name: Release
       uses: softprops/action-gh-release@v1
       env: 
