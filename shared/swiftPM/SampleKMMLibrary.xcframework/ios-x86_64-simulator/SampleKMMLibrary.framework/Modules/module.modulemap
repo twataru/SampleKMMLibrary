@@ -1,0 +1,8 @@
+framework module SampleKMMLibrary {
+    umbrella header "SampleKMMLibrary.h"
+
+    export *
+    module * { export * }
+
+    use Foundation
+}

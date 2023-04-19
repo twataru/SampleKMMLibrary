@@ -37,4 +37,4 @@ jobs:
         name: ${{ steps.tag_version.outputs.new_tag }}
         tag_name: ${{ steps.tag_version.outputs.new_tag }}
         generate_release_notes: true
-        files: shared/build/swiftPM/SampleKMMLibrary.xcframework.zip
+#        files: shared/build/swiftPM/SampleKMMLibrary.xcframework.zip
