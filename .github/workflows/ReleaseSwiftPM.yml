@@ -35,7 +35,7 @@ jobs:
         git config --local user.name "github-actions[bot]"
         git add . 
         git commit -m "Update SwiftPM"
-        git push main"
+        git push main
     - name: Release
       uses: softprops/action-gh-release@v1
       env: 
